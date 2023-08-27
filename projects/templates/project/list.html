@@ -1,0 +1,11 @@
+{% load i18n %}
+{% block content %}
+    <h3>my project</h3>
+    <ul>
+        {% for project in object_list %}
+            <li>{{project.title}}</li>
+        {% empty %}
+            <li> there are no projects</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
